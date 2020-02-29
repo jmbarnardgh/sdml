@@ -1,8 +1,6 @@
-# SDML
+# System Design Markdown Language (SDML)
 
 [![Travis CI Build Status](https://travis-ci.org/jmbarnardgh/SDML.svg?branch=master)](https://travis-ci.org/jmbarnardgh/SDML)
-
-## System Design Markdown Language
 
 SDML is a markdown language which can be used to easily write, store, share and curate business requirements, technical specifications, constraints, and other software project documentation elements.
 
