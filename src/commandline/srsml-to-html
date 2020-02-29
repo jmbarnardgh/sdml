@@ -1,1 +1,0 @@
-ruby SDML_to_html_cl.rb $1 $2
