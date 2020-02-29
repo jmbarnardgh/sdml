@@ -14,9 +14,26 @@ class TokenTree
       @root = if parent_token == nil
                 token
               else 
-                TokenTree::insert(token, current_depth, parent_token)
+                TokenTree::insert(token, parent_token)
               end
     end
+  end
+
+  # Inserts a token into the tree.
+  #
+  # Algorithm: 
+  #
+  # A token is provided for insertion. The token is
+  # compared with its parent token. If the parent token
+  # can directly relate to the provided token, then
+  # the token is inserted as a child of the parent token.
+  # Otherwise, a recursive search for a suitable ancestor
+  # token begins. If no suitable ancestor exists, the
+  # insertion is rejected and an error raised. 
+  #
+  # @param token [Token] the Token object to be inserted
+  def self.insert(token, parent_token)
+    
   end
 
 end

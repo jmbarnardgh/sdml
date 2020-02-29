@@ -1,6 +1,9 @@
+require_relative '../modules/token_relation.rb'
+
 # Base class for token objects generated during SDML parsing.
 # Intended to be a super class only.
 class Token
+  include TokenRelation  
   public
 
   # A hash of strings which, collectively, form the regular expression
@@ -14,18 +17,24 @@ class Token
   # contents encapsulated within the pattern does not transpile to content.
   IGNORABLE_PATTERN_KEYS = []
 
-  DEFAULT_META_CONTENTS = { :token_index => 0, :token_subtype => "undefined" }
+  DEFAULT_META_CONTENTS = {
+    :relatableness => [:leaf], 
+    :token_subtype => "undefined" 
+  }
 
   attr_accessor :raw_string, :contents, :metacontents
 
-  def initialize(parsed_string = "", contents_from_parsed_string = {}, meta_contents = { :token_subtype => "", :token_index => 0 })
+  def initialize(parsed_string = "", contents_from_parsed_string = {}, meta_contents = DEFAULT_META_CONTENTS )
     # The raw string value that was parsed to form the token
     @raw_string = parsed_string
     # A hash of contents of the parsed token
     @contents = contents_from_parsed_string
-    # A hash of metacontents of the parsed token, such as token sub-type,
-    # any kind of uniquing key for the token, an index for the token as
-    # it may be listed amongst other tokens of a similar sub-type, etc.
+    # Valid relatableness symboles are
+    #
+    #   - `:childless_leaf`
+    #   - `:leaf_of_connective_parent`
+    #   - `:parent_of_connective_child`
+    #
     @metacontents = meta_contents
   end
 
