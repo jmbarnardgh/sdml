@@ -1,0 +1,37 @@
+## Technical Specifications
+
+Hello World screen
+  when, shall
+    - system starts up
+    - appear first
+  has
+    screen title
+      shall be
+        - "Hello World"
+        - red
+        - size 16 point font
+        - displayed in Arial font
+    font size selector
+      shall be
+        dial
+          when, shall
+            - rotated to the left
+            - descrease the font size of the screen title
+          when, shall
+            - rotated to the right
+            - increase the font size of the screen title           
+    update button
+      when, shall
+        - pressed
+        - notify the system to change the font size of the screen title to whatever the font size selector dial is set to
+      shall be
+        - rectangular
+        - under the font size selector dial
+      has
+        - width greater than height
+        - rounded corners
+        - blue background
+        text
+          shall be
+            - white
+            - "Save"

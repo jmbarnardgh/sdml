@@ -1,0 +1,45 @@
+{
+    "SDML_glossary": { 
+        "type": "business",
+        "scope": "SDML.glossary.generic.business",
+        "terms": [
+            {
+                "term": "sales representative",
+                "alternates": null,
+                "case": "insensitive",
+                "scope": "personnel.sales",
+                "explanation": "a person who works with a client account in order to sell the client products",
+                "synonyms": [
+                    "rep",
+                    "sales rep",
+                    "representative"
+                ] 
+            },
+            {
+                "term": "manager",
+                "alternates": null,
+                "case": "insensitive",
+                "scope": "personnel.management",
+                "explanation": "a person who manages people, places or things",
+                "synonyms": [
+                    "manager",
+                    "mngr",
+                    "boss"
+                ] 
+            },
+            {
+                "term": "led",
+                "alternates": [
+                    "Led"
+                ],
+                "case": "sensitive",
+                "scope": "personnel.management",
+                "explanation": "the past tense of 'to lead'",
+                "synonyms": [
+                    "directed",
+                    "guided"
+                ] 
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+.vs_code
+
+# A folder from which developers may attempt new code
+# without disturbing the folder structure of the 
+# main project.
+.playground
+.DS_Store
+
+# Ignore any gemfiles that are produced
+.gemfile
+
+*.gem
+
+Gemfile.lock
+
+.repoprep

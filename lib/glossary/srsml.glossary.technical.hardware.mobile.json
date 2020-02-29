@@ -1,0 +1,33 @@
+{
+    "SDML_glossary": { 
+        "type": "technical",
+        "scope": "SDML.glossary.technical.hardware.mobile.json",
+        "specificity_rating": 5,
+        "terms": [
+            {
+                "term": "iPhone",
+                "alternates": null,
+                "case": "insensitive",
+                "scope": "mobile.phone",
+                "explanation": "The iPhone is a brand name owned by Apple, Inc. The iPhone is Apple's flagship handheld mobile computing device.",
+                "super_types": [
+                    "smartphone",
+                    "handheld computer",
+                    "mobile phone"
+                ] 
+            },
+            {
+                "term": "iPad",
+                "alternates": null,
+                "case": "insensitive",
+                "scope": "mobile.tablet",
+                "explanation": "The iPad is a brand name owned by Apple, Inc. The iPad is Apple's flagship tablet mobile computing device.",
+                "super_types": [
+                    "tablet",
+                    "smart pad",
+                    "tab"
+                ] 
+            }
+        ]
+    }
+}
