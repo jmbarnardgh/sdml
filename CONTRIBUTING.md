@@ -1,5 +1,5 @@
-# Contributing to SDML
+# Contributing to System Design Markdown Language
 
-SDML is still early in development. Please check back in the future for more detailed contributing guidelines.
+System Design Markdown Language is still early in development. Please check back in the future for more detailed contributing guidelines.
 
 In the meantime, feel free to fork!

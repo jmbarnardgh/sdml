@@ -18,24 +18,24 @@ class Token
   IGNORABLE_PATTERN_KEYS = []
 
   DEFAULT_META_CONTENTS = {
-    :relatableness => [:leaf], 
     :token_subtype => "undefined" 
   }
 
-  attr_accessor :raw_string, :contents, :metacontents
+  attr_accessor :raw_string, :contents, :metacontents, :parent_token, :child_tokens, :relatableness
 
-  def initialize(parsed_string = "", contents_from_parsed_string = {}, meta_contents = DEFAULT_META_CONTENTS )
+  def initialize(parsed_string = "", contents_from_parsed_string = {}, meta_contents = DEFAULT_META_CONTENTS)
     # The raw string value that was parsed to form the token
     @raw_string = parsed_string
     # A hash of contents of the parsed token
     @contents = contents_from_parsed_string
-    # Valid relatableness symboles are
-    #
-    #   - `:childless_leaf`
-    #   - `:leaf_of_connective_parent`
-    #   - `:parent_of_connective_child`
-    #
+    # Type of token in :token_subtype
     @metacontents = meta_contents
+    # The parent node (Token) object of which this one is a child. Set to nil
+    # intially, but can be updated.
+    @parent_token = nil
+    # The child node (Token) objects of which this one is a parent. Set to empty
+    # initially, but can be updated.
+    @child_tokens = []
   end
 
   def self.occurrences
