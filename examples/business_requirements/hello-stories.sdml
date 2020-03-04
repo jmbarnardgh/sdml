@@ -1,0 +1,10 @@
+## Stories
+
+actor
+  want
+    login
+      so that
+        - I can securely access the system
+    change my email address
+      so that
+        - properly login to the system if my email address changes

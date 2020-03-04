@@ -16,7 +16,7 @@ class TestTokenizeTechnicalSpecification < Test::Unit::TestCase
 
   def test_tokenize_tech_spec_file
     dir_name = File.dirname(__FILE__)
-    sdml_file_path = "#{dir_name}/../../examples/hello-tech-specs.sdml"
+    sdml_file_path = "#{dir_name}/../../examples/technical_specifications/hello-tech-specs.sdml"
     tokens = SDMLParse::parse_file(sdml_file_path)
     tokens.each do |t|
       puts "#{t.class} : #{t.contents[:element_content]}"

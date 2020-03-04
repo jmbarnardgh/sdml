@@ -1,6 +1,7 @@
 require "require_all"
 require_rel "../extensions/string"
 require_rel "../tokens"
+require_rel "../tokens/modules"
 
 # A basic parser that helps convert SDML string into object tokens.
 class SDMLParse

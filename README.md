@@ -1,19 +1,19 @@
-# System Design Markdown Language
+# System Design Markdown Language (SDML)
 
-[![Travis CI Build Status](https://travis-ci.org/jmbarnardgh/System Design Markdown Language.svg?branch=master)](https://travis-ci.org/jmbarnardgh/System Design Markdown Language)
+[![Travis CI Build Status](https://travis-ci.org/jmbarnardgh/SDML.svg?branch=master)](https://travis-ci.org/jmbarnardgh/SDML)
 
-System Design Markdown Language is a markdown language which can be used to easily write, store, share and curate business requirements, technical specifications, constraints, and other software project documentation elements.
+SDML is a markdown language which can be used to easily write, store, share and curate business requirements, technical specifications, constraints, and other software project documentation elements.
 
 ## Getting Up and Running
 
-System Design Markdown Language is early in development, but you can run the tests to see current behavior:
+SDML is early in development, but you can run the tests to see current behavior:
 
   - install Ruby
   - clone this repository
   - `bundle install`
   - `rake test`
 
-## Why System Design Markdown Language?
+## Why SDML?
 
   - conciseness
   - reduced syntax overhead
@@ -39,7 +39,7 @@ System Design Markdown Language is early in development, but you can run the tes
 
 ## Example
 
-([hello-tech-specs.System Design Markdown Language](/examples/hello-tech-specs.System Design Markdown Language))
+([hello-tech-specs.sdml](/examples/hello-tech-specs.sdml))
 ```
 ## Technical Specifications
 

@@ -1,14 +1,16 @@
 # A set of properties that allows for Token objects
 # to determine their relationship(s) or potential
 # relationship(s) with other tokens. 
+require_relative '../../extensions/error/token_relation_error_extension.rb'
+
 module TokenRelation
 
   # Given a Token object, determine if this token can parent the provided token.
   #
   # Algorithm:
   # The token in question is evaluated based on its @relatableness property.
-  # The following criteria must be met in order for the token in question to
-  # be able to be parented by the calling Token object.
+  #
+  #   ## Technical Specifications Criteria
   #
   #   1. token.relatableness[:leafable] == true
   #   2. token.relatableness[:indentation_depth] > self.relatableness[:indentation_depth]
@@ -28,12 +30,44 @@ module TokenRelation
     false
   end
 
+
+
+  ## Helper Methods
+
+  # Returns whether or not the calling token is properly relatable, with valid
+  # default definitions for all the relatable hash keys.
+  #
+  # Relatable Hash keys are:
+  #
+  # - `:leafable`
+  # - `:previously_stacked_types_dependent`
+  # - `:section_type`
+  # - `:conditional_clause_member`
+  # - `:indentation_depth`
+  # - `:is_connective`
+  #
+  # @param [Token] token the token to check for whether or not it meets basic
+  #   relatable criteria
+  # @return [Boolean]
+  def self.is_properly_relatable?(token)
+    r = token.relatableness
+    raise NOT_LEAFABLE_EXCEPTION if !(r[:leafable].is_a?(Boolean))
+    raise TOKEN_TYPE_STACK_DEPENDENCE_UNKNOWN if !(r[:previously_stacked_types_dependent].is_a?(Boolean))
+    # TODO: finish this method with the other symbol types listed in the desc.
+    true
+  end
+
+  # Returns whether or not the calling token can act as a leaf (no child tokens)
+  # @return [Boolean]
   def is_leafable?
     bool_val = self.relatableness[:leafable]
     # TODO: raise if bool_val is not a boolean
     bool_val
   end
 
+  # Returns whether the provided token has fewer indentation spaces than the
+  # calling token
+  # @return [Boolean]
   def exceeds_indentation_level_of?(token)
     a_depth = self.relatableness[:indentation_depth]
     b_depth = token.relatableness[:indentation_depth]

@@ -8,3 +8,6 @@ gem 'debase'
 gem 'ruby-debug-ide'
 
 gem "test-unit"
+
+gem 'solargraph'
+gem 'rufo'
